@@ -1,0 +1,18 @@
+{
+  "file_format_version" : "1.0.0",
+  "layer" : {
+    "name": "VK_LAYER_DISPLAYX_display_x",
+    "type": "INSTANCE",
+    "library_path": "displayx_layer.so",
+    "api_version": "1.1.0",
+    "implementation_version": "1",
+    "description": "DisplayX, an implementation of Xlib/Xcb wsi for Android",
+    "functions": {
+      "vkGetInstanceProcAddr": "DisplayX_GetInstanceProcAddr",
+      "vkGetDeviceProcAddr": "DisplayX_GetDeviceProcAddr"
+    },
+    "disable_environment": {
+      "DISABLE_DISPLAY_X": "1"
+    }
+  }
+}
