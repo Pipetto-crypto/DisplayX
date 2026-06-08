@@ -883,7 +883,7 @@ DisplayX_DestroyDevice(VkDevice device,
 
 	dev->table.DeviceWaitIdle(device);
 	
-	for (auto it = queues.begin(); it != queues.end(); it++) {
+	for (auto it = queues.begin(); it != queues.end();) {
 		dev->table.DestroyFence(device, it->second->fence->handle, nullptr);
 		it = queues.erase(it);
 	}
